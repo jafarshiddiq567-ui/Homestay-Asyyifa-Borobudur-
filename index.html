@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homestay Assyifa</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      overflow-x: hidden;
+      background-color: #f5f6fa;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #2c3e50;
+      padding: 15px 30px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar h2 {
+      font-size: 22px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #f1c40f;
+    }
+
+    /* Slide umum */
+    section {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 80px 20px 50px;
+      text-align: center;
+    }
+
+    /* Slide 1: Beranda */
+    #beranda {
+      background: url('beranda.jpg') center/cover no-repeat;
+      color: white;
+      position: relative;
+    }
+
+    #beranda::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+    }
+
+    #beranda .content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+    }
+
+    #beranda h1 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    #beranda p {
+      font-size: 18px;
+    }
+
+    /* Galeri */
+    #galeri {
+      background-color: #f9f9f9;
+    }
+
+    #galeri h2 {
+      margin-bottom: 20px;
+    }
+
+    .galeri-img {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .galeri-img img {
+      width: 270px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+    }
+
+    .galeri-img img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Fasilitas */
+    #fasilitas {
+      background-color: #ecf0f1;
+    }
+
+    .fasilitas-list {
+      max-width: 500px;
+      text-align: left;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .fasilitas-list li {
+      margin-bottom: 10px;
+    }
+
+    /* Booking */
+    #booking {
+      background-color: #fff;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 320px;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    input, textarea, button {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    button {
+      background-color: #2c3e50;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #34495e;
+    }
+
+    /* Tombol WhatsApp */
+    .whatsapp-btn {
+      background-color: #25d366;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #1ebe5d;
+    }
+
+    /* Kontak & Lokasi */
+    .kontak {
+      margin-top: 20px;
+      line-height: 1.8;
+    }
+
+    .kontak a {
+      color: #2c3e50;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .kontak a:hover {
+      color: #f1c40f;
+    }
+
+    .reviews {
+      margin-top: 30px;
+      max-width: 600px;
+      text-align: left;
+    }
+
+    .review {
+      background: #fafafa;
+      border-left: 4px solid #f1c40f;
+      padding: 10px 15px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <h2>Homestay Assyifa</h2>
+    <ul>
+      <li><a href="#beranda">Beranda</a></li>
+      <li><a href="#galeri">Galeri</a></li>
+      <li><a href="#fasilitas">Fasilitas</a></li>
+      <li><a href="#booking">Booking</a></li>
+    </ul>
+  </div>
+
+  <!-- Slide 1: Beranda -->
+  <section id="beranda">
+    <div class="content">
+      <h1>Selamat Datang di Homestay Assyifa</h1>
+      <p>Tempat menginap yang nyaman, bersih, dekat dengan wisata candi Borobudur.</p>
+    </div>
+  </section>
+
+  <!-- Slide 2: Galeri -->
+  <section id="galeri">
+    <h2>Galeri Homestay</h2>
+    <div class="galeri-img">
+      <img src="foto1.jpg" alt="Kamar">
+      <img src="foto2.jpg" alt="Ruang Tamu">
+      <img src="foto3.jpg" alt="Teras">
+      <img src="foto4.jpg" alt="Teras">
+      <img src="foto5.jpg" alt="Teras">
+    </div>
+  </section>
+
+  <!-- Slide 3: Fasilitas -->
+  <section id="fasilitas">
+    <h2>Fasilitas Kami</h2>
+    <ul class="fasilitas-list">
+      <li>✔ 4 Kamar tidur luas dan bersih</li>
+      <li>✔ Kipas dan Wi-Fi gratis</li>
+      <li>✔ Dapur lengkap</li>
+      <li>✔ Air Panas</li>
+      <li>✔ 3 kamar mandi</li>
+      <li>✔ 3 lantai, lantai teratas rooftop dan musholla </li>
+      <li>✔ Dekat dengan pusat wisata</li>
+    </ul>
+  </section>
+
+  <!-- Slide 4: Booking -->
+  <section id="booking">
+    <h2>Formulir Booking</h2>
+
+    <!-- FORM: langsung kirim ke email -->
+    <form action="https://formsubmit.co/edisusmanto555@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Booking Baru dari Website Homestay Assyifa">
+      <input type="text" name="Nama Lengkap" placeholder="Nama Lengkap" required>
+      <input type="email" name="Email" placeholder="Alamat Email" required>
+      <input type="date" name="Tanggal Check-In" required>
+      <input type="date" name="Tanggal Check-Out" required>
+      <textarea name="Pesan Tambahan" rows="3" placeholder="Pesan tambahan..."></textarea>
+      <button type="submit">Kirim Booking ke Email</button>
+    </form>
+
+    <!-- Tombol WhatsApp -->
+    <a class="whatsapp-btn" href="https://wa.me/6287885015034?text=Halo%20Homestay%20Assyifa,%20saya%20ingin%20melakukan%20pemesanan." target="_blank">
+      💬 Chat via WhatsApp
+    </a>
+
+    <div class="kontak">
+      <p>📞 <a href="tel:087885015034">0878-8501-5034</a></p>
+      <p>✉️ <a href="mailto:edisusmanto555@gmail.com">edisusmanto555@gmail.com</a></p>
+      <p>📍 <a href="https://maps.app.goo.gl/jzhobcuNw3p7MVgTA" target="_blank">Lihat di Google Maps</a></p>
+    </div>
+
+    <div class="reviews">
+      <h3>Ulasan Pengunjung</h3>
+      <div class="review">
+        <p><strong>"Sumpah enak banget ,adem ,ada lantai tiga alias atap buat liat pemandangan."</strong></p>
+        <p>— Iqbal Najih</p>
+      </div>
+      <div class="review">
+        <p><strong>"Rumahnya cukup cantik
+dengan fasilitas yang memadai.
+lokasinya bersebelahan deng candi borobudur.
+Anda hanya cukup jalan kaki deri sini ke borobudur."</strong></p>
+        <p>— Alasroban</p>
+      </div>
+      <div class="review">
+        <p><strong>"Nyaman... Sambutan nya asik,.. Berasa family,.. Dan sangat dekat dengan Candi Borobudur"</strong></p>
+        <p>— Grand Livina</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Homestay Assyifa. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
+
